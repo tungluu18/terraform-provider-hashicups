@@ -65,7 +65,7 @@ func dataSourceCoffees() *schema.Resource {
 }
 
 func dataSourceCoffeesRead(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
-	client := &http.Client{Timeout: 10 * time.Second}
+	client := &http.Client{Timeout: 5 * time.Second}
 
 	// Warning or errors can be collected in a slice type
 	var diags diag.Diagnostics
